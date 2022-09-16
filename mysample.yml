@@ -5,6 +5,6 @@
       - name: i want to install apache
         apt:
           name: apache2
-          state: absent
+          state: present
 
     
