@@ -12,7 +12,7 @@
       - name: i want to start /stop apache webserver
         service:
           name: apache2
-          state: stop
+          state: stopped
         when: ansible_os_family =="Debian"
 
 
@@ -21,6 +21,7 @@
           name: httpd
           state: present
         when: ansible_os_family =="RedHat"
+
 
      
 
