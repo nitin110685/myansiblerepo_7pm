@@ -16,11 +16,11 @@
         when: ansible_os_family =="Debian"
 
 
-      - name: i want to install apache on RedHat 
+      - name: Install the latest version of Apache
         ansible.builtin.yum:
           name: httpd
-          state: present
-        # when: ansible_os_family =="RedHat"
+          state: latest
+        
 
 
      
