@@ -9,6 +9,13 @@
         when: ansible_os_family =="Debian"
 
 
+      - name: i want to start /stop apache webserver
+        service:
+          name: apache2
+          state: stop
+        when: ansible_os_family =="Debian"
+
+
       - name: i want to install apache on RedHat 
         yum:
           name: httpd
