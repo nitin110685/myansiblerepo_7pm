@@ -1,5 +1,5 @@
 --- 
-- hosts: all 
+- hosts: mywebserver
   become: yes
   tasks: 
       - name: i want to install apache on ubuntu server
@@ -17,9 +17,10 @@
 
 
       - name: Install the latest version of Apache
-        ansible.builtin.yum:
+        yum:
           name: httpd
-          state: latest
+          state: present
+        when: ansible_os_family =="RedHat"
         
 
 
